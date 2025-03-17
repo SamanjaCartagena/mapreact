@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Students from './Students'
 
 
 
@@ -22,6 +23,18 @@ function App() {
       'work':'army'
     },
   ]
+   const students=[
+    {
+      'name':'Ciara',
+      'id':2834,
+      'work':'teacher'
+    },
+    {
+      'name':'Vicky',
+      'id':2884,
+      'work':'army'
+    },
+  ]
   return (
     <div className="App">
       {employees.map(employee => {
@@ -35,6 +48,10 @@ function App() {
           <h1>{e.name}-{e.age}</h1>
         )
       })}
+      <hr/>
+      {students.map((student)=>
+      <Students name={student.name} id={student.id}/>
+      )}
      
 
     
